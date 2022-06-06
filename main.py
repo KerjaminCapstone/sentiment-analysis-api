@@ -2,6 +2,7 @@
     Libraries
 """
 from flask import Flask
+from flask import jsonify
 from flask_restful import reqparse
 from run_nlp import NlpPredict
 
