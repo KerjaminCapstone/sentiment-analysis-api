@@ -2,8 +2,6 @@
     Libraries
 """
 from flask import Flask
-import flask.scaffold
-flask.helpers._endpoint_from_view_func = flask.scaffold._endpoint_from_view_func
 from flask_restful import reqparse
 from run_nlp import NlpPredict
 
@@ -33,4 +31,4 @@ def predict():
     Main 
 """
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8000)
+    app.run()
