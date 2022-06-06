@@ -16,6 +16,10 @@ parser.add_argument("komentar", type=str, required=True, help="Komentar harus di
 """
     Resouce 
 """
+@app.errorhandler(500)
+def internal_server_error(e):
+    return jsonify(error=str(e)), 500
+
 @app.route('/predict', methods=['POST'])
 def predict():
     args = parser.parse_args()
