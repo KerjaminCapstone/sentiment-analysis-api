@@ -13,7 +13,7 @@ app = Flask(__name__)
 """
 parser = reqparse.RequestParser()
 parser.add_argument("komentar", type=str, required=True, help="Komentar harus diisi")
-
+parser.add_argument("rating", type=int, required=True, help="Rating harus diisi")
 """
     Resouce 
 """
@@ -26,10 +26,18 @@ def predict():
     args = parser.parse_args()
     model = NlpPredict('nlp_model/sentimentanalysisv4.h5')
     model.set_sentence(args["komentar"])
-
     nlp_score = model.predict()
+    if nlp_score <= 0.325:
+        lebel = "Positif"
+    else:
+        lebel = "Negatif"
+
+    rating_model_sum = model.sumRatingModel(args["rating"], lebel, nlp_score)
+
     return {"data": {
-        "nlp_score": nlp_score
+        "nlp_score": nlp_score,
+        "lebel": lebel,
+        "rating_model_sum": rating_model_sum
     }}, 200
 
 """
