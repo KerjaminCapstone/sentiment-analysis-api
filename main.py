@@ -34,9 +34,11 @@ def predict():
 
     rating_model_sum = model.sumRatingModel(args["rating"], lebel, nlp_score)
 
+    if rating_model_sum == None:
+        rating_model_sum = 0
+
     return {"data": {
         "nlp_score": nlp_score,
-        "lebel": lebel,
         "rating_model_sum": rating_model_sum
     }}, 200
 

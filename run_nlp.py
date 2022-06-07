@@ -95,7 +95,6 @@ class NlpPredict():
 
     def sumRatingModel(self, rating, lebel, nlp_score):
         if lebel == "Positif":
-            print("masuk sana")
             if 3 <= rating < 5:
                 result = float(rating) + nlp_score
                 return round(result, 2)
