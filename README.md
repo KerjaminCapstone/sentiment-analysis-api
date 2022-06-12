@@ -30,4 +30,5 @@ Content-Type: application/json
 ```
 
 ### Example
-![image](https://user-images.githubusercontent.com/83566398/173224075-06ee76a0-5ad3-4df4-9fe6-b3aba6e50f6b.png)
+![image](https://user-images.githubusercontent.com/83566398/173225421-dc59db10-ca28-4635-b7b8-5f11be163301.png)
+
