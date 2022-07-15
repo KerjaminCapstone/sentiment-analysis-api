@@ -7,7 +7,7 @@ When the client post a review for freelance after confirm the order is finished,
 store the result (nlp_score and rating_model_sum) to the database. This rating_model_sum data will be used for sorting/rank the freelancers when the client
 search the freelancers from their categories. 
 
-### How to try this API?
+### How to try this API? (currently unavailable)
 You can try this api at https://ml-api-4-dot-kerjamin-capstone.et.r.appspot.com/predict 
 
 ### Header
